@@ -1,5 +1,6 @@
 <?php
 
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 
 class TablaRolSeeder extends Seeder
@@ -10,7 +11,7 @@ class TablaRolSeeder extends Seeder
      * @return void
      */
     public function run()
-    {p
+    {
         $rols=[
             'administrador',
             'editor',
@@ -19,7 +20,8 @@ class TablaRolSeeder extends Seeder
         foreach($rols as $key =>$value)
         {
             DB::table('rol')->insert([ 
-                'nombre'=>$value
+                'nombre'=>$value,
+                'created_at'=>Carbon::now()->format('Y-m-d H:i:s')
             ]);
 
         }
