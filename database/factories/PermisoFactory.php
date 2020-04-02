@@ -9,6 +9,6 @@ use Faker\Generator as Faker;
 $factory->define(permiso::class, function (Faker $faker) {
     return [
         'nombre' => $faker->word,
-        'slog' => $faker->word,
+        'slug' => $faker->word,
     ];
 });
