@@ -10,7 +10,7 @@
     <span class="brand-text font-weight-light">AdminLTE 3</span>
   </a>
 
-  <!-- Sidebar -->
+  <!-- Sidebar --> 
   <div class="sidebar">
     <!-- Sidebar user (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">

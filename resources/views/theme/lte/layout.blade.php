@@ -3,7 +3,10 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>AdminLTE 3 | Fixed Sidebar</title>
+        <title>
+        @yield('titulo','Finis')
+        </title>
+
         <!-- Tell the browser to be responsive to screen width -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Font Awesome -->
@@ -16,6 +19,8 @@
         <link rel="stylesheet" href="{{asset("assets/$theme/dist/css/adminlte.min.css")}}">
         <!-- Google Font: Source Sans Pro -->
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+        @yield("styles")
     </head>
 
 
@@ -24,13 +29,17 @@
         <div class="wrapper">
           
             <!-- Inicio header -->
-            @include("theme/$theme/header"); 
+            @include("theme/$theme/header")
             <!-- Fin header -->
 
             <!-- Inicio Asside -->
-            @include("theme/$theme/aside");
+            @include("theme/$theme/aside")
 
             <!-- Fin Asside -->
+
+
+            
+
 
 
 
@@ -40,18 +49,32 @@
 
               <!-- Content Header (Page header) -->
               <section class="content-header">
+                <!-- Titulo dinamico que se podrá cambiar desde los llamados en blade -->
                 <div class="container-fluid">
                   <div class="row mb-2">
                     <div class="col-sm-6">
-                      <h1>Fixed Layout</h1>
-                    </div> 
+                      <h1> @yield('titulo-modulo') </h1>
+                    </div>
+                    <div class="col-sm-6">
+                      <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">@yield('ruta-modulo')</li>
+                      </ol>
+                    </div>
                   </div>
                 </div><!-- /.container-fluid -->
               </section>
+
+              <section class="content">
+                  @yield('contenido')
+              </section>
+            </div>
+
+            <!-- Inicio Asside -->
+            @include("theme/$theme/footer")
+            <!-- Fin Asside -->
+
         </div>
-
-
-        
         <!-- jQuery -->
         <script src="{{asset("assets/$theme/plugins/jquery/jquery.min.js")}}"></script>
         <!-- Bootstrap 4 -->
@@ -60,9 +83,7 @@
         <script src="{{asset("assets/$theme/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js")}}"></script>
         <!-- AdminLTE App -->
         <script src="{{asset("assets/$theme/dist/js/adminlte.min.js")}}"></script>
-        <!-- AdminLTE for demo purposes -->
-        <script src="{{asset("assets/$theme/dist/js/demo.js")}}"></script>
-
+        @yield("scripts")
 
     </body>
 </html>

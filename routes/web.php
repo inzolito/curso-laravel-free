@@ -14,3 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/','InicioController@index');
+Route::get('Admin/Permiso','Admin\PermisoController@index')->name('permiso');
+Route::get('Admin/Crear','Admin\PermisoController@crear');
