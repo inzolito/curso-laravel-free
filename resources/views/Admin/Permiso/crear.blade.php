@@ -1,5 +1,5 @@
 <!-- Extendemos el tema  para poder incluir los sections que se cargan en los yilds -->
-@extends("theme/$theme/layout");
+@extends("theme/$theme/layout")
 
 
 @section('titulo')

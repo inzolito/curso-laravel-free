@@ -1,0 +1,4 @@
+label.requerido::after{
+    content:" *";
+   /* columns: #e73d4a; */
+}

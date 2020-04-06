@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','InicioController@index');
 Route::get('Admin/Permiso','Admin\PermisoController@index')->name('permiso');
 Route::get('Admin/Crear','Admin\PermisoController@crear');
+Route::get('Admin/Menu','Admin\MenuController@index')->name('menu');
+Route::get('Admin/Menu/crear','Admin\MenuController@crear')->name('crear_menu');
+Route::post('Admin/Menu','Admin\MenuController@guardar')->name('guardar_menu');
