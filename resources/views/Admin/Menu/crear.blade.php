@@ -17,6 +17,11 @@
 <!-- fin cabecera -->
 
 
+@section('scripts')
+<script src="{{asset("assets/pages/scripts/admin/menu/crear.js")}}"  type="text/javascript" ></script>
+@endsection
+
+
 <!--contenido -->
 @section('contenido')
  
